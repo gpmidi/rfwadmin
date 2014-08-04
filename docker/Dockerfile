@@ -46,7 +46,7 @@ RUN  cd /root/ \
 RUN  service httpd start \
   && sleep 5 \
   && chmod 755 /root/rfwadmin/install.sh \
-  && bash --login -c "cd /root/rfwadmin/ && /bin/bash /root/rfwadmin/install.sh && /etc/init.d/minecraft_default.sh stop" \
+  && bash --login -c "cd /root/rfwadmin/ && /bin/bash /root/rfwadmin/install.sh && /etc/init.d/minecraft_default.sh stop || true" \
   && service httpd stop
 
 # Save as it'll be mounted over
