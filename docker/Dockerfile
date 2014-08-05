@@ -42,8 +42,8 @@ RUN  chmod 777 /var/run/screen \
   && chown root:root /var/run/screen
 
 # Get RFW Admin
-RUN  cd /root/ \
-  && rm -Rf /root/rfwadmin \
+WORKDIR /root/
+RUN  rm -Rf /root/rfwadmin \
   && git clone https://github.com/gpmidi/rfwadmin.git
 
 RUN  service httpd start \
