@@ -77,6 +77,13 @@ else
     echo "UI_PHP_TIMEZONE set to ${UI_PHP_TIMEZONE}"
 fi
 
+# Handle allowing uploads
+if [ "${UI_ALLOW_PLUGIN_UPLOAD}" == "" ]; then
+    echo "UI_ALLOW_PLUGIN_UPLOAD not set"
+else
+    echo "UI_ALLOW_PLUGIN_UPLOAD set to ${UI_ALLOW_PLUGIN_UPLOAD}"
+fi
+
 # Handle MC_MEM_LOW settings
 if [ "${MC_MEM_LOW}" == "" ]; then
     echo "MC_MEM_LOW not set"

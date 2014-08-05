@@ -61,6 +61,10 @@ class minecraft {
     if (getenv("UI_PHP_TIMEZONE")!=FALSE) {
       date_default_timezone_set(trim(getenv("UI_PHP_TIMEZONE"),'"')); //various times displayed in files. Default `date +"%Z"`
     }
+
+    if (getenv("UI_ALLOW_PLUGIN_UPLOAD")=="1" || getenv("UI_ALLOW_PLUGIN_UPLOAD")=='"1"') {
+      $this->allow_plugin_upload = true; //allow web interface users to install and run arbitrary code!
+    }
   }
 
   function cmd(Array $args) {
