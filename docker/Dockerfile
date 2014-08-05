@@ -22,6 +22,9 @@ ENV MC_USE_SAFEOFF 0
 
 
 ##### Actual Work #####
+# Add startup script
+ADD run.sh /run.sh
+
 # Do an initial update
 RUN yum -y update
 
@@ -66,9 +69,6 @@ RUN  mkdir -p /var/lib/minecraft/servers/default/server.stock/ \
   && chmod 755 /var/lib/minecraft/servers/default/server/ /var/lib/minecraft/servers/default/server/{logs,world} \
   && cp -a /var/lib/minecraft/servers/default/server/* /var/lib/minecraft/servers/default/server.stock \
   && rm -Rf /var/lib/minecraft/servers/default/server.stock/world
-
-# Add startup script
-ADD run.sh /run.sh
 
 
 ##### Final #####
