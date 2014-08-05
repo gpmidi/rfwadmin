@@ -9,6 +9,9 @@ cd /var/lib/minecraft/
 /bin/chmod 777 /var/run/screen
 /bin/chown root:root /var/run/screen
 
+# Just in case
+/usr/bin/screen -wipe || true
+
 
 # Pre-download latest MC server
 LATEST_SERVER_VERSION=`wget --quiet -O - https://s3.amazonaws.com/Minecraft.Download/versions/versions.json |grep '"release": ' |sed  's/^ \+"release": "\(.\+\)".\+$/\1/'`
