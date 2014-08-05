@@ -50,7 +50,9 @@ RUN  service httpd start \
   && sleep 5 \
   && ls -alh /bin/su \
   && chmod 755 /root/rfwadmin/install.sh \
-  && bash --login -c "cd /root/rfwadmin/ && /bin/bash /root/rfwadmin/install.sh"
+  && whoami
+
+RUN  bash --login -c "whoami && cd /root/rfwadmin/ && /bin/bash /root/rfwadmin/install.sh"
 
 RUN  /bin/bash --login -c "/etc/init.d/minecraft_default.sh stop"
 
