@@ -48,6 +48,7 @@ RUN  rm -Rf /root/rfwadmin \
 
 RUN  service httpd start \
   && sleep 5 \
+  && ls -alh /bin/su \
   && chmod 755 /root/rfwadmin/install.sh \
   && bash --login -c "cd /root/rfwadmin/ && /bin/bash /root/rfwadmin/install.sh"
 
