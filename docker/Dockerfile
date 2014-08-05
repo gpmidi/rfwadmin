@@ -8,6 +8,7 @@ RUN umask 022
 ONBUILD RUN umask 022
 
 # Set default env vars
+ENV HOME "/root"
 #ENV http_proxy ""
 ENV UI_HTML_TITLE "Minecraft Map Management"
 ENV UI_ARMORY_ENABLED 1
