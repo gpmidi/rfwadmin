@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+set -e
 
 echo "Starting at "`/bin/date`
 
