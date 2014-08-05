@@ -42,7 +42,10 @@ RUN  chmod 777 /var/run/screen \
 
 # Get RFW Admin
 RUN  cd /root/ \
-  && git clone https://github.com/gpmidi/rfwadmin.git
+  && git clone https://github.com/gpmidi/rfwadmin.git \
+  && ls -alh /root/rfwadmin/ \
+  && git status /root/rfwadmin \
+  && git pull /root/rfwadmin
 
 RUN  service httpd start \
   && sleep 5 \
