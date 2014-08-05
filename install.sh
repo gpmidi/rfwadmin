@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 #If a previous installation exists, this script installs a new code version while preserverving configuration and data
 
 ### Settings ###
